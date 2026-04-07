@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500&display=swap');
 
 
-/* ==================== 0. VARIABLES & RESET ==================== */
 :root {
   --gold:          rgb(255, 217, 0);
   --gold-dim:      rgba(255, 217, 0, 0.45);
@@ -20,7 +19,6 @@
   --radius:        8px;
   --transition:    0.35s ease;
 
-  /* Carousel Card Sizes */
   --card-w-active: 360px;
   --card-h-active: 540px;
   --card-w-side:   260px;
@@ -63,6 +61,12 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+
+
+
+
+
 
 
 
@@ -335,6 +339,17 @@ ul {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* ==================== 2. VIDEO SECTION ==================== */
 .video-section {
   width: 100%;
@@ -409,6 +424,14 @@ ul {
   .video-section { height: 750px; }
   .hero-text h1 { font-size: clamp(6rem, 10vw, 10rem); letter-spacing: 0.12em; }
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -593,6 +616,13 @@ ul {
   .content { padding: 36px 16px; }
   .content-image img { height: 260px; }
 }
+
+
+
+
+
+
+
 
 
 
@@ -922,6 +952,15 @@ ul {
 
 
 
+
+
+
+
+
+
+
+
+
 /* ==================== 5. MAP SECTION ==================== */
 .reviews-section {
   width: 100%;
@@ -1120,6 +1159,16 @@ ul {
   .reviews-content { padding: 36px 16px; }
   .rating-summary { width: 100%; }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1368,6 +1417,22 @@ ul {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==================== 7. LINKS SECTION ==================== */
 .links-section {
   width: 100%;
@@ -1522,6 +1587,20 @@ ul {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==================== 8. SERVICES SECTION ==================== */
 .services {
   width: 100%;
@@ -1643,6 +1722,15 @@ ul {
     margin-top: 36px;
   }
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1834,7 +1922,6 @@ ul {
 
 /* ==================== 10. UTILITIES ==================== */
 
-/* Reveal on scroll */
 .reveal {
   opacity: 0;
   transform: translateY(36px);
