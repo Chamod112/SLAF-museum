@@ -1,3 +1,25 @@
+<?php
+$reviews = [
+  [
+    'initial' => 'R',
+    'name'    => 'Roshan P.',
+    'stars'   => 5,
+    'text'    => '"An incredible experience. The vintage aircraft collection is breathtaking and the staff are very knowledgeable. A must-visit for anyone interested in aviation history."',
+  ],
+  [
+    'initial' => 'S',
+    'name'    => 'Samanthi K.',
+    'stars'   => 4,
+    'text'    => '"We visited with our school group and it was truly educational. The outdoor exhibits and the mini-cinema were our highlights. Highly recommend for families!"',
+  ],
+  [
+    'initial' => 'A',
+    'name'    => 'Amara D.',
+    'stars'   => 5,
+    'text'    => '"Fascinating place that honours the brave men and women of the Air Force. The library and scale model workshop are hidden gems. Well worth the trip to Ratmalana."',
+  ],
+];
+?>
 <section class="reviews-section" id="contact">
   <div class="reviews-wrapper">
 
@@ -25,7 +47,7 @@
         <?php foreach ($reviews as $r):
           $filled = (int) $r['stars'];
           $empty = 5 - $filled;
-          ?>
+        ?>
           <div class="review-card">
             <div class="review-header">
               <div class="reviewer-avatar"><?php echo htmlspecialchars($r['initial']); ?></div>
@@ -54,25 +76,3 @@
 
   </div>
 </section>
-<script>
-  $reviews = [
-    [
-      'initial' => 'R',
-      'name'    => 'Roshan P.',
-      'stars'   => 5,
-      'text'    => '"An incredible experience. The vintage aircraft collection is breathtaking and the staff are very knowledgeable. A must-visit for anyone interested in aviation history."',
-    ],
-    [
-      'initial' => 'S',
-      'name'    => 'Samanthi K.',
-      'stars'   => 4,
-      'text'    => '"We visited with our school group and it was truly educational. The outdoor exhibits and the mini-cinema were our highlights. Highly recommend for families!"',
-    ],
-    [
-      'initial' => 'A',
-      'name'    => 'Amara D.',
-      'stars'   => 5,
-      'text'    => '"Fascinating place that honours the brave men and women of the Air Force. The library and scale model workshop are hidden gems. Well worth the trip to Ratmalana."',
-    ],
-  ];
-</script>

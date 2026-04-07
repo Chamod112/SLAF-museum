@@ -1,5 +1,16 @@
-<script src=""></script>
-<script src=""></script>
+<script src="js/HomeV4.js"></script>
+<script src="js/main.js"></script>
+<?php
+$quickLinks = [
+  ['label' => 'Home', 'href' => 'index.php'],
+  ['label' => 'Exhibits', 'href' => 'exhibits.php'],
+  ['label' => 'Gallery', 'href' => 'gallery.php'],
+  ['label' => 'Former Commanders', 'href' => 'FormerCommanders.php'],
+  ['label' => 'Souvenir Shop', 'href' => 'SouvenirShop.php'],
+  ['label' => 'Contact Us', 'href' => 'index.php#contact'],
+];
+
+?>
 <footer class="footer">
   <div class="footer-content">
 
@@ -44,17 +55,6 @@
 
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 Sri Lanka Air Force Museum. All Rights Reserved.</p>
+    <p>&copy; <?php echo date('Y'); ?> Sri Lanka Air Force Museum. All Rights Reserved.</p>
   </div>
 </footer>
-<script>
-  $quickLinks = [
-    ['label' => 'Home', 'href' => 'index.php'],
-    ['label' => 'Exhibits', 'href' => 'exhibits.php'],
-    ['label' => 'Gallery', 'href' => 'gallery.php'],
-    ['label' => 'Former Commanders', 'href' => 'FormerCommanders.php'],
-    ['label' => 'Souvenir Shop', 'href' => 'SouvenirShop.php'],
-    ['label' => 'Contact Us', 'href' => 'index.php#contact'],
-  ];
-
-</script>
