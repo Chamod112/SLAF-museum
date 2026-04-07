@@ -1,3 +1,28 @@
+<?php
+$cards = [
+  [
+    'img'   => 'images/linkG.png',
+    'alt'   => 'Gallery',
+    'title' => 'Gallery',
+    'desc'  => 'View stunning aircraft, operations, and heritage photos from the SLAF archives.',
+    'href'  => 'gallery.php',
+  ],
+  [
+    'img'   => 'images/linkC.jpg',
+    'alt'   => 'Contact',
+    'title' => 'Contact',
+    'desc'  => 'Connect with us. Reach out with questions, feedback, or visit enquiries.',
+    'href'  => 'index.php#contact',
+  ],
+  [
+    'img'   => 'images/linkE.jpg',
+    'alt'   => 'Souvenir Shop',
+    'title' => 'Souvenir Shop',
+    'desc'  => 'Discover exclusive SLAF memorabilia, scale models, and collectibles.',
+    'href'  => 'SouvenirShop.php',
+  ],
+];
+?>
 <section class="links-section">
   <div class="links-container">
     <div class="tagline">EXPLORE. DISCOVER. INNOVATE.</div>
@@ -16,28 +41,3 @@
     </div>
   </div>
 </section>
-<script>
-  $cards = [
-    [
-      'img'   => 'images/linkG.png',
-      'alt'   => 'Gallery',
-      'title' => 'Gallery',
-      'desc'  => 'View stunning aircraft, operations, and heritage photos from the SLAF archives.',
-      'href'  => 'gallery.php',
-    ],
-    [
-      'img'   => 'images/linkC.jpg',
-      'alt'   => 'Contact',
-      'title' => 'Contact',
-      'desc'  => 'Connect with us. Reach out with questions, feedback, or visit enquiries.',
-      'href'  => 'index.php#contact',
-    ],
-    [
-      'img'   => 'images/linkE.jpg',
-      'alt'   => 'Souvenir Shop',
-      'title' => 'Souvenir Shop',
-      'desc'  => 'Discover exclusive SLAF memorabilia, scale models, and collectibles.',
-      'href'  => 'SouvenirShop.php',
-    ],
-  ];
-</script>
