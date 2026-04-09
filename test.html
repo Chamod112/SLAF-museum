@@ -5,388 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SLAF Museum — Tickets</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background: #f4f0e8;
-        font-family: "Source Serif 4", serif;
-        color: #1e1e1e;
-      }
-
-      /* ── HERO ── */
-      .hero {
-        height: 300px;
-        background: url("") center/cover no-repeat;
-        background-color: #1a1c12;
-        position: relative;
-        display: flex;
-        align-items: flex-end;
-        padding: 0 10%;
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to top,
-          rgba(10, 12, 8, 0.9) 0%,
-          rgba(10, 12, 8, 0.3) 60%,
-          transparent 100%
-        );
-      }
-
-      .hero-content {
-        position: relative;
-        z-index: 1;
-        padding-bottom: 40px;
-      }
-
-      .hero-tag {
-        font-family: "Oswald", sans-serif;
-        font-size: 10px;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        color: #c8b87a;
-        margin-bottom: 10px;
-      }
-
-      .hero h1 {
-        font-family: "Oswald", sans-serif;
-        font-weight: 600;
-        font-size: clamp(32px, 5vw, 52px);
-        color: #f4f0e8;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        line-height: 1.05;
-      }
-
-      /* ── SECTION ── */
-      .section {
-        padding: 56px 10%;
-      }
-
-      .section-label {
-        font-family: "Oswald", sans-serif;
-        font-size: 10px;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        color: #c8b87a;
-        margin-bottom: 8px;
-      }
-
-      .section h2 {
-        font-family: "Oswald", sans-serif;
-        font-weight: 600;
-        font-size: 26px;
-        color: #1a1a1a;
-        margin-bottom: 16px;
-        text-transform: uppercase;
-      }
-
-      .section p {
-        color: #555;
-        line-height: 1.75;
-        margin-bottom: 12px;
-        max-width: 720px;
-        font-size: 15px;
-      }
-
-      .section p strong {
-        color: #1a1a1a;
-      }
-
-      hr.divider {
-        border: none;
-        border-top: 1px solid #c8b87a;
-        margin: 0 10% 0;
-      }
-
-      /* ── INFO PILLS ── */
-      .info-pills {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-top: 20px;
-      }
-
-      .pill {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background: #1a1c12;
-        color: #f4f0e8;
-        font-family: "Oswald", sans-serif;
-        font-size: 12px;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        padding: 8px 16px;
-        border-radius: 4px;
-      }
-
-      .pill span.dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #c8b87a;
-        flex-shrink: 0;
-      }
-
-      /* ── TICKET GRID ── */
-      .ticket-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-        margin-top: 32px;
-      }
-
-      @media (max-width: 1100px) {
-        .ticket-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      @media (max-width: 580px) {
-        .ticket-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      /* ── TICKET CARD ── */
-      .ticket-card {
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .ticket-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
-      }
-
-      .ticket-img-wrap {
-        height: 150px;
-        background: #d6cebc;
-        overflow: hidden;
-      }
-
-      .ticket-img-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: sepia(15%) brightness(0.9);
-        display: block;
-      }
-
-      .ticket-body {
-        padding: 16px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .ticket-cat {
-        font-family: "Oswald", sans-serif;
-        font-size: 9px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: #c8b87a;
-        margin-bottom: 4px;
-      }
-
-      .ticket-title {
-        font-family: "Oswald", sans-serif;
-        font-weight: 600;
-        font-size: 17px;
-        color: #1a1a1a;
-        margin-bottom: 4px;
-        text-transform: uppercase;
-      }
-
-      .ticket-sub {
-        font-size: 12px;
-        color: #999;
-        margin-bottom: 12px;
-      }
-
-      .ticket-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-        border-top: 1px solid #f0ece0;
-        border-bottom: 1px solid #f0ece0;
-        margin-bottom: 14px;
-      }
-
-      .ticket-price {
-        font-family: "Oswald", sans-serif;
-        font-size: 20px;
-        font-weight: 600;
-        color: #1a1a1a;
-      }
-
-      .ticket-type {
-        font-family: "Oswald", sans-serif;
-        font-size: 10px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: #aaa;
-      }
-
-      .ticket-btn {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        background: #1a1c12;
-        color: #f4f0e8;
-        font-family: "Oswald", sans-serif;
-        font-size: 12px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: background 0.2s;
-        margin-top: auto;
-      }
-
-      .ticket-btn:hover {
-        background: #2e3018;
-      }
-      .ticket-btn.active {
-        background: #c8b87a;
-        color: #1a1a1a;
-      }
-
-      .details {
-        display: none;
-        margin-top: 12px;
-        font-size: 13px;
-        color: #555;
-        line-height: 1.9;
-        border-top: 1px dashed #e0d8c4;
-        padding-top: 10px;
-      }
-
-      .details.show {
-        display: block;
-      }
-
-      /* ── FLOATING BUTTONS ── */
-      .fab {
-        position: fixed;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
-        transition:
-          transform 0.2s,
-          box-shadow 0.2s,
-          opacity 0.3s;
-        z-index: 100;
-      }
-
-      .fab:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
-      }
-      .fab-back {
-        bottom: 28px;
-        left: 28px;
-        background: #2e2e2e;
-        color: #f4f0e8;
-      }
-      .fab-top {
-        bottom: 28px;
-        right: 28px;
-        background: #c8b87a;
-        color: #1a1a1a;
-        opacity: 0;
-        pointer-events: none;
-      }
-      .fab-top.visible {
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      /* ── ANIMATIONS ── */
-      @keyframes up {
-        from {
-          opacity: 0;
-          transform: translateY(16px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .hero-content {
-        animation: up 0.6s ease both;
-      }
-      .info-section {
-        animation: up 0.6s ease 0.1s both;
-      }
-      .ticket-card {
-        opacity: 0;
-        animation: up 0.5s ease both;
-      }
-      .ticket-card:nth-child(1) {
-        animation-delay: 0.15s;
-      }
-      .ticket-card:nth-child(2) {
-        animation-delay: 0.25s;
-      }
-      .ticket-card:nth-child(3) {
-        animation-delay: 0.35s;
-      }
-      .ticket-card:nth-child(4) {
-        animation-delay: 0.45s;
-      }
-
-      @media (max-width: 640px) {
-        .section {
-          padding: 40px 6%;
-        }
-        hr.divider {
-          margin: 0 6%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="../museum/css/homeV4.css" />
   </head>
   <body>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-content">
-        <div class="hero-tag">SLAF Heritage Collection</div>
+
+    <section class="tickets-hero">
+      <div class="tickets-hero-content">
+        <div class="tickets-hero-tag">SLAF Heritage Collection</div>
         <h1>Visit the<br />SLAF Museum</h1>
       </div>
     </section>
 
-    <hr class="divider" />
+    <hr class="tickets-divider" />
 
-    <!-- INFO -->
-    <section class="section info-section">
-      <div class="section-label">Plan Your Visit</div>
+    <section class="tickets-section tickets-info-section">
+      <div class="tickets-section-label">Plan Your Visit</div>
       <h2>Visiting the SLAF Museum</h2>
       <p>
         The museum is open to the public on all days except Mondays and public
@@ -395,21 +31,18 @@
       </p>
       <p><strong>Opening Hours:</strong> 8:30 AM – 4:30 PM</p>
 
-      <div class="info-pills">
-        <div class="pill"><span class="dot"></span>Open Tue – Sun</div>
-        <div class="pill"><span class="dot"></span>8:30 AM – 4:30 PM</div>
-        <div class="pill">
-          <span class="dot"></span>Closed on Public Holidays
-        </div>
-        <div class="pill"><span class="dot"></span>Photography by Approval</div>
+      <div class="tickets-info-pills">
+        <div class="tickets-pill"><span class="tickets-pill-dot"></span>Open Tue – Sun</div>
+        <div class="tickets-pill"><span class="tickets-pill-dot"></span>8:30 AM – 4:30 PM</div>
+        <div class="tickets-pill"><span class="tickets-pill-dot"></span>Closed on Public Holidays</div>
+        <div class="tickets-pill"><span class="tickets-pill-dot"></span>Photography by Approval</div>
       </div>
     </section>
 
-    <hr class="divider" />
+    <hr class="tickets-divider" />
 
-    <!-- GUIDELINES -->
-    <section class="section">
-      <div class="section-label">Before You Arrive</div>
+    <section class="tickets-section">
+      <div class="tickets-section-label">Before You Arrive</div>
       <h2>Important Visitor Guidelines</h2>
       <p>
         The museum compound is clearly demarcated and restricted areas are
@@ -421,14 +54,13 @@
       </p>
     </section>
 
-    <hr class="divider" />
+    <hr class="tickets-divider" />
 
-    <!-- TICKETS -->
-    <section class="section">
-      <div class="section-label">Admission</div>
+    <section class="tickets-section">
+      <div class="tickets-section-label">Admission</div>
       <h2>Ticket Information</h2>
 
-      <div class="ticket-grid">
+      <div class="tickets-grid">
         <div class="ticket-card">
           <div class="ticket-img-wrap"><img src="" alt="" /></div>
           <div class="ticket-body">
@@ -439,10 +71,8 @@
               <span class="ticket-price">Rs. 20</span>
               <span class="ticket-type">From</span>
             </div>
-            <button class="ticket-btn" onclick="toggleDetails(this)">
-              View Prices
-            </button>
-            <div class="details">
+            <button class="ticket-btn" onclick="toggleDetails(this)">View Prices</button>
+            <div class="ticket-details">
               Adults — Rs. 200<br />
               Children — Rs. 50<br />
               School Uniform — Rs. 20<br />
@@ -461,10 +91,8 @@
               <span class="ticket-price">$10</span>
               <span class="ticket-type">From</span>
             </div>
-            <button class="ticket-btn" onclick="toggleDetails(this)">
-              View Prices
-            </button>
-            <div class="details">
+            <button class="ticket-btn" onclick="toggleDetails(this)">View Prices</button>
+            <div class="ticket-details">
               Adults — $15<br />
               Children — $10
             </div>
@@ -481,10 +109,8 @@
               <span class="ticket-price">Free</span>
               <span class="ticket-type">Access</span>
             </div>
-            <button class="ticket-btn" onclick="toggleDetails(this)">
-              View List
-            </button>
-            <div class="details">
+            <button class="ticket-btn" onclick="toggleDetails(this)">View List</button>
+            <div class="ticket-details">
               Clergy<br />
               Differently Abled<br />
               Armed Forces &amp; Police
@@ -502,10 +128,8 @@
               <span class="ticket-price">Rs. 50</span>
               <span class="ticket-type">From</span>
             </div>
-            <button class="ticket-btn" onclick="toggleDetails(this)">
-              View Details
-            </button>
-            <div class="details">
+            <button class="ticket-btn" onclick="toggleDetails(this)">View Details</button>
+            <div class="ticket-details">
               Retired Personnel — Rs. 50<br />
               Relatives (max 3) — Rs. 50
             </div>
@@ -514,27 +138,15 @@
       </div>
     </section>
 
-    <!-- FLOATING BUTTONS -->
-    <button class="fab fab-back" onclick="history.back()" title="Go Back">
-      &#8592;
-    </button>
-    <button
-      class="fab fab-top"
-      id="scrollTop"
-      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-      title="Back to Top"
-    >
-      &#8593;
-    </button>
+    <button class="tickets-fab tickets-fab-back" onclick="history.back()" title="Go Back">&#8592;</button>
+    <button class="tickets-fab tickets-fab-top" id="scrollTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" title="Back to Top">&#8593;</button>
 
     <script>
-      // Scroll to top visibility
       const topBtn = document.getElementById("scrollTop");
       window.addEventListener("scroll", () => {
         topBtn.classList.toggle("visible", window.scrollY > 200);
       });
 
-      // Toggle ticket details
       function toggleDetails(btn) {
         const details = btn.nextElementSibling;
         details.classList.toggle("show");
@@ -544,5 +156,6 @@
           : "View Prices";
       }
     </script>
+
   </body>
 </html>

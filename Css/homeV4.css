@@ -77,6 +77,8 @@ ul {
 
 
 
+
+
 /* ==================== 1. NAVIGATION ==================== */
 .navbar {
   position: fixed;
@@ -98,7 +100,6 @@ ul {
   will-change: transform;
 }
 
-/* Single-pixel champagne gold line — visible only once scrolled */
 .navbar::after {
   content: '';
   position: absolute;
@@ -123,7 +124,6 @@ ul {
   opacity: 1;
 }
 
-/* Frosted glass on scroll — refined and minimal */
 .navbar.scrolled {
   background: rgba(3, 9, 18, 0.78);
   backdrop-filter: blur(22px) saturate(1.6) brightness(0.9);
@@ -131,7 +131,6 @@ ul {
   box-shadow: 0 1px 0 rgba(255, 217, 0, 0.08), 0 12px 48px rgba(0, 0, 0, 0.55);
 }
 
-/* Slide away on scroll down */
 .navbar.hidden {
   transform: translateY(-100%);
 }
@@ -176,7 +175,6 @@ ul {
   color: rgba(255, 217, 0, 0.92);
 }
 
-/* Ultra-thin gold underline, expands from centre */
 .navbar ul li > a::before {
   content: '';
   position: absolute;
@@ -199,7 +197,6 @@ ul {
   display: none;
 }
 
-/* Dropdown — dark glass panel */
 .navbar ul li ul {
   display: none;
   position: absolute;
@@ -245,13 +242,11 @@ ul {
   display: none;
 }
 
-/* Sub-sub menus */
 .navbar ul li ul li ul {
   top: 0;
   left: 100%;
 }
 
-/* Mobile toggle */
 .mobile-nav-toggle {
   display: none;
   cursor: pointer;
@@ -268,7 +263,6 @@ ul {
   color: rgba(255, 217, 0, 0.9);
 }
 
-/* ── Responsive Navbar ── */
 @media (max-width: 1000px) {
   .navbar {
     padding: 0 20px;
@@ -329,11 +323,6 @@ ul {
     align-items: center;
   }
 }
-
-
-
-
-
 
 
 
@@ -441,6 +430,7 @@ ul {
 
 
 
+
 /* ==================== 3. CONTENT SECTION ==================== */
 .content {
   padding: 80px 50px;
@@ -495,7 +485,6 @@ ul {
   margin-bottom: 32px;
 }
 
-/* Info Grid */
 .content-info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -553,7 +542,6 @@ ul {
   color: #8a9099;
 }
 
-/* CTA Button */
 .content-link {
   display: inline-block;
   padding: 14px 36px;
@@ -633,6 +621,7 @@ ul {
 
 
 
+
 /* ==================== 4. HANGAR ==================== */
 .gallery-section {
   background: var(--section-bg);
@@ -683,7 +672,6 @@ ul {
   line-height: 1;
 }
 
-/* Arrow Buttons */
 .arrow-btn {
   position: absolute;
   top: 50%;
@@ -758,7 +746,6 @@ ul {
   will-change: transform;
 }
 
-/* Cards */
 .card {
   flex: 0 0 auto;
   position: relative;
@@ -871,7 +858,6 @@ ul {
   overflow-y: auto;
 }
 
-/* Carousel Footer */
 .carousel-foot {
   padding: 32px 64px 0;
   display: flex;
@@ -976,7 +962,6 @@ ul {
   min-height: 640px;
 }
 
-/* LEFT: Reviews Content */
 .reviews-content {
   flex: 1;
   padding: 80px 60px 80px 50px;
@@ -1018,7 +1003,6 @@ ul {
   max-width: 480px;
 }
 
-/* Rating Summary */
 .rating-summary {
   display: flex;
   align-items: center;
@@ -1053,7 +1037,6 @@ ul {
   letter-spacing: 0.05em;
 }
 
-/* Review Cards */
 .review-cards {
   display: flex;
   flex-direction: column;
@@ -1127,7 +1110,6 @@ ul {
   font-style: italic;
 }
 
-/* RIGHT: Map */
 .reviews-map-container {
   flex: 1;
   position: relative;
@@ -1178,14 +1160,16 @@ ul {
 
 
 
-/* ==================== 6. OUR HISTORY (SLIDER) ==================== */
+
+
+
+/* ==================== 6. OUR HISTORY ==================== */
 .slider-section {
   background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
   position: relative;
   width: 100%;
 }
 
-/* Section Header */
 .slider-section-header {
   padding: 56px 80px 0;
 }
@@ -1246,7 +1230,6 @@ ul {
   background-repeat: no-repeat;
 }
 
-/* Left-aligned overlay */
 .slide-overlay {
   position: relative;
   z-index: 2;
@@ -1260,7 +1243,6 @@ ul {
   color: white;
 }
 
-/* Right-aligned overlay */
 .slide-overlays {
   position: absolute;
   right: 0;
@@ -1315,7 +1297,6 @@ ul {
   transform: translateY(-3px);
 }
 
-/* Slider Navigation Buttons */
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -1424,15 +1405,6 @@ ul {
 
 
 
-
-
-
-
-
-
-
-
-
 /* ==================== 7. LINKS SECTION ==================== */
 .links-section {
   width: 100%;
@@ -1476,7 +1448,6 @@ ul {
   gap: 28px;
 }
 
-/* Link Cards — scoped to links section only */
 .links-section .link-card {
   position: relative;
   height: 440px;
@@ -1577,28 +1548,6 @@ ul {
   .cards-grid { grid-template-columns: 1fr; gap: 20px; }
   .links-section .link-card { height: 360px; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ==================== 8. SERVICES SECTION ==================== */
@@ -1740,7 +1689,6 @@ ul {
 
 
 
-
 /* ==================== 9. FOOTER ==================== */
 .footer {
   background-color: #0a1a2f;
@@ -1761,7 +1709,6 @@ ul {
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Left - About */
 .footer-about {
   flex: 2;
   min-width: 260px;
@@ -1793,7 +1740,6 @@ ul {
   max-width: 420px;
 }
 
-/* Middle - Contact */
 .footer-contact {
   flex: 1.5;
   min-width: 240px;
@@ -1862,7 +1808,6 @@ ul {
   margin-bottom: 2px;
 }
 
-/* Right - Quick Links */
 .footer-services {
   flex: 1.2;
   min-width: 200px;
@@ -1899,7 +1844,6 @@ ul {
   color: #ffd966;
 }
 
-/* Footer Bottom */
 .footer-bottom {
   max-width: 1400px;
   margin: 0 auto;
@@ -1920,8 +1864,17 @@ ul {
 }
 
 
-/* ==================== 10. UTILITIES ==================== */
 
+
+
+
+
+
+
+
+
+
+/* ==================== 10. UTILITIES ==================== */
 .reveal {
   opacity: 0;
   transform: translateY(36px);
@@ -1937,3 +1890,340 @@ ul {
 .reveal-group .reveal:nth-child(2) { transition-delay: 0.18s; }
 .reveal-group .reveal:nth-child(3) { transition-delay: 0.31s; }
 .reveal-group .reveal:nth-child(4) { transition-delay: 0.44s; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== 11. TICKETS PAGE ==================== */
+
+/* ── HERO ── */
+.tickets-hero {
+  height: 300px;
+  background-color: var(--bg-navy);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 10%;
+  overflow: hidden;
+}
+
+.tickets-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 40px;
+}
+
+.tickets-hero-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.tickets-hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: clamp(32px, 5vw, 52px);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.05;
+}
+
+/* ── SECTION ── */
+.tickets-section {
+  padding: 56px 10%;
+  background: var(--bg);
+}
+
+.tickets-section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.tickets-section h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--white);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.tickets-section p {
+  color: #d0dce8;
+  line-height: 1.75;
+  margin-bottom: 12px;
+  max-width: 720px;
+  font-size: 15px;
+}
+
+.tickets-section p strong {
+  color: var(--white);
+}
+
+hr.tickets-divider {
+  border: none;
+  border-top: 1px solid var(--gold-dim);
+  margin: 0 10%;
+}
+
+/* ── INFO PILLS ── */
+.tickets-info-pills {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tickets-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-navy);
+  color: var(--white-dim);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 217, 0, 0.18);
+}
+
+.tickets-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ── TICKET GRID ── */
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+@media (max-width: 1100px) {
+  .tickets-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 580px) {
+  .tickets-grid { grid-template-columns: 1fr; }
+}
+
+/* ── TICKET CARD ── */
+.ticket-card {
+  background: var(--bg-card);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ticket-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(255, 217, 0, 0.12);
+}
+
+.ticket-img-wrap {
+  height: 150px;
+  background: var(--bg-navy);
+  overflow: hidden;
+}
+
+.ticket-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(15%) brightness(0.9);
+  display: block;
+}
+
+.ticket-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-cat {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.ticket-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--white);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.ticket-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.ticket-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  margin-bottom: 14px;
+}
+
+.ticket-price {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.ticket-type {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ticket-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 217, 0, 0.3);
+  background: rgba(255, 217, 0, 0.06);
+  color: var(--gold);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  margin-top: auto;
+}
+
+.ticket-btn:hover {
+  background: rgba(255, 217, 0, 0.14);
+  border-color: var(--gold);
+  color: var(--white);
+}
+
+.ticket-btn.active {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+}
+
+.ticket-details {
+  display: none;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #d0dce8;
+  line-height: 1.9;
+  border-top: 1px dashed rgba(255, 217, 0, 0.2);
+  padding-top: 10px;
+}
+
+.ticket-details.show {
+  display: block;
+}
+
+/* ── FLOATING BUTTONS ── */
+.tickets-fab {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.3s;
+  z-index: 100;
+}
+
+.tickets-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.tickets-fab-back {
+  bottom: 28px;
+  left: 28px;
+  background: var(--bg-navy);
+  color: var(--white-dim);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tickets-fab-top {
+  bottom: 28px;
+  right: 28px;
+  background: var(--gold);
+  color: var(--bg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tickets-fab-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.tickets-hero-content { animation: up 0.6s ease both; }
+.tickets-info-section  { animation: up 0.6s ease 0.1s both; }
+
+.ticket-card {
+  opacity: 0;
+  animation: up 0.5s ease both;
+}
+.ticket-card:nth-child(1) { animation-delay: 0.15s; }
+.ticket-card:nth-child(2) { animation-delay: 0.25s; }
+.ticket-card:nth-child(3) { animation-delay: 0.35s; }
+.ticket-card:nth-child(4) { animation-delay: 0.45s; }
+
+@media (max-width: 640px) {
+  .tickets-section { padding: 40px 6%; }
+  hr.tickets-divider { margin: 0 6%; }
+}
