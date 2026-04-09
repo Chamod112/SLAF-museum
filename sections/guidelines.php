@@ -1,5 +1,5 @@
-<section class="section">
-    <div class="section-label">Before You Arrive</div>
+<section class="tickets-section">
+    <div class="tickets-section-label">Before You Arrive</div>
     <h2>Important Visitor Guidelines</h2>
     <p>
         The museum compound is clearly demarcated and restricted areas are
@@ -10,4 +10,3 @@
         ensure national security and the safety of all visitors.
     </p>
 </section>
-<hr class="divider" />
