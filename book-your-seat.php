@@ -10,5 +10,5 @@ require_once 'sections/visitor-info.php';
 require_once 'sections/guidelines.php';
 require_once 'sections/tickets.php';
 
-
+require_once 'sections/sub-footer.php';
 require_once 'sections/footer.php';
