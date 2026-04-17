@@ -1,5 +1,5 @@
 <div class="contact-right">
-  <h1>Visitor Information</h1>
+  <h1>Contact Details</h1>
 
   <div class="contact-info-grid">
     <div class="contact-info-item">
