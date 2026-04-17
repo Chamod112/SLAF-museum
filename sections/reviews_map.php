@@ -68,7 +68,7 @@ $reviews = [
 
     <div class="reviews-map-container">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.7!2d79.8855!3d6.8211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25b43571e43db%3A0xf68c5a3e1a8ab2e6!2sSri%20Lanka%20Air%20Force%20Museum!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3089.806480425353!2d79.88920747499554!3d6.823862093173958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25ac61680bad9%3A0xb6dbdd061fb17aa8!2sSri%20Lanka%20Air%20Force%20Museum!5e1!3m2!1sen!2slk!4v1776401892657!5m2!1sen!2slk"
         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade" title="SLAF Museum Location">
       </iframe>
