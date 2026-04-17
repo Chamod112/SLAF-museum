@@ -12,7 +12,7 @@
             Sri Lanka's skies.
           </p>
           <div class="content-info-grid">
-            <a href="book-your-seat.php" class="content-link">BOOK YOUR TOUR</a>
+            <a href="book-your-seat.php" class="content-link">Visitor Information</a>
           </div>
         </div>
       </div>
