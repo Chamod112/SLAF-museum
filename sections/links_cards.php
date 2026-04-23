@@ -12,7 +12,7 @@ $cards = [
     'alt'   => 'Contact',
     'title' => 'Contact',
     'desc'  => 'Connect with us. Reach out with questions, feedback, or visit enquiries.',
-    'href'  => 'index.php#contact',
+    'href'  => 'contact.php',
   ],
   [
     'img'   => 'images/linkE.jpg',
