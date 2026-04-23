@@ -1,31 +1,34 @@
 <div class="contact-left">
   <div class="contact-left-content">
+    <div class="contact-left-tag">SLAF Heritage Collection</div>
+    <h2>Contact Details</h2>
+    <p>All the key details you need in one place.</p>
+
     <div class="contact-details">
       <div class="contact-detail">
-        <div class="contact-detail-label">📞 Phone</div>
+        <div class="contact-detail-label">Location</div>
+        <div class="contact-detail-value">Ratmalana, Sri Lanka</div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-label">Opening Hours</div>
         <div class="contact-detail-value">
-          <a href="tel:+94112635855">+94 11 2635855</a>
+          9:00 AM – 5:00 PM
+          <span class="contact-detail-sub">Open Daily</span>
         </div>
       </div>
 
       <div class="contact-detail">
-        <div class="contact-detail-label">✉️ Email</div>
+        <div class="contact-detail-label">Entry</div>
         <div class="contact-detail-value">
-          <a href="mailto:museum@airforce.lk">museum@airforce.lk</a>
+          Affordable tickets available
+          <span class="contact-detail-sub">Student discounts apply</span>
         </div>
       </div>
 
       <div class="contact-detail">
-        <div class="contact-detail-label">Sri Lanka Air Force Museum</div>
-        <div class="contact-detail-value">Official Contact Point</div>
-      </div>
-
-      <div class="contact-detail">
-        <div class="contact-detail-label">Address</div>
-        <div class="contact-detail-value">
-          Air Force Base Ratmalana,<br />
-          Ratmalana, Sri Lanka
-        </div>
+        <div class="contact-detail-label">Highlights</div>
+        <div class="contact-detail-value">Aircraft • Weapons • History • Interactive Exhibits</div>
       </div>
     </div>
   </div>
