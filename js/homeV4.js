@@ -1,15 +1,3 @@
-/* ============================================================
-   SLAF MUSEUM — homeV4.js
-   Sections:
-   1.  Navigation (mobile toggle + scroll hide/show)
-   2.  Video Section (autoplay handling)
-   3.  Hangar Carousel (gallery with infinite loop)
-   4.  Our History Slider (auto-advancing slider)
-   5.  Services Parallax
-   6.  Smooth Scroll for anchor links
-   7.  Reveal on Scroll (IntersectionObserver)
-============================================================ */
-
 document.addEventListener('DOMContentLoaded', function () {
 
 
@@ -186,8 +174,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const vpCenter   = viewport.offsetWidth / 2;
         const activeCard = cards[activeIndex];
         if (!activeCard) return;
-        const cardCenter = activeCard.offsetLeft + activeCard.offsetWidth / 2;
-        track.style.transform = 'translateX(' + -(cardCenter - vpCenter) + 'px)';
+
+        // Use getBoundingClientRect so the calculation is accurate on all
+        // screen sizes — offsetLeft is unreliable when the track has been
+        // translated or when viewport padding varies on mobile.
+        const vpLeft     = viewport.getBoundingClientRect().left;
+        const cardRect   = activeCard.getBoundingClientRect();
+        const currentX   = new DOMMatrix(getComputedStyle(track).transform).m41;
+        const cardCenter = (cardRect.left - vpLeft) + activeCard.offsetWidth / 2;
+        track.style.transform = 'translateX(' + (currentX - (cardCenter - vpCenter)) + 'px)';
 
         if (instant) {
           // Re-enable transitions after one frame

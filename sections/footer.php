@@ -1,4 +1,4 @@
-<script src="js/HomeV4.js"></script>
+<script src="js/homeV4.js"></script>
 <script src="js/main.js"></script>
 <?php
 $quickLinks = [
@@ -58,3 +58,5 @@ $quickLinks = [
     <p>&copy; <?php echo date('Y'); ?> Sri Lanka Air Force Museum. All Rights Reserved.</p>
   </div>
 </footer>
+</body>
+</html>

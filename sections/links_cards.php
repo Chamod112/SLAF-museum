@@ -5,7 +5,7 @@ $cards = [
     'alt'   => 'Gallery',
     'title' => 'Gallery',
     'desc'  => 'View stunning aircraft, operations, and heritage photos from the SLAF archives.',
-    'href'  => '',
+    'href'  => 'gallery.php',
   ],
   [
     'img'   => 'images/linkC.jpg',

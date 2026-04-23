@@ -66,13 +66,70 @@ $reviews = [
       </div>
     </div>
 
-    <div class="reviews-map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3089.806480425353!2d79.88920747499554!3d6.823862093173958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25ac61680bad9%3A0xb6dbdd061fb17aa8!2sSri%20Lanka%20Air%20Force%20Museum!5e1!3m2!1sen!2slk!4v1776401892657!5m2!1sen!2slk"
-        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade" title="SLAF Museum Location">
-      </iframe>
+    <div class="reviews-stats-panel">
+
+      <div class="stats-panel-label">Our Legacy in Numbers</div>
+
+      <?php
+      $stats = [
+        ['icon' => 'bi-calendar3',         'value' => 75,  'suffix' => '', 'label' => 'Years of Aviation History'],
+        ['icon' => 'bi-airplane',           'value' => 40,  'suffix' => '+', 'label' => 'Aircraft on Display'],
+        ['icon' => 'bi-people-fill',        'value' => 500, 'suffix' => 'K+','label' => 'Visitors Welcomed'],
+        ['icon' => 'bi-trophy-fill',        'value' => 18,  'suffix' => '+', 'label' => 'Rare Military Honours'],
+      ];
+      ?>
+
+      <div class="stats-grid">
+        <?php foreach ($stats as $s): ?>
+          <div class="stat-item">
+            <i class="bi <?php echo $s['icon']; ?> stat-icon"></i>
+            <div class="stat-number" data-target="<?php echo $s['value']; ?>">
+              0<span class="stat-suffix"><?php echo htmlspecialchars($s['suffix']); ?></span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-label"><?php echo htmlspecialchars($s['label']); ?></div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+
     </div>
 
   </div>
 </section>
+<script>
+/* Animated counter — triggers once when the stats panel scrolls into view */
+(function () {
+  const items = document.querySelectorAll(".stat-number");
+  if (!items.length) return;
+
+  function animateCounter(el) {
+    const target   = parseInt(el.dataset.target, 10);
+    const suffix   = el.querySelector(".stat-suffix");
+    const suffixTxt = suffix ? suffix.outerHTML : "";
+    const duration = 1800;
+    const start    = performance.now();
+
+    function step(now) {
+      const elapsed  = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      /* ease-out cubic */
+      const eased    = 1 - Math.pow(1 - progress, 3);
+      const current  = Math.floor(eased * target);
+      el.innerHTML   = current + suffixTxt;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  items.forEach(el => observer.observe(el));
+})();
+</script>
